@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Secao4_exercicios/Exercicio1_Secao04/Exercicio1_Secao04.iml" filepath="$PROJECT_DIR$/Secao4_exercicios/Exercicio1_Secao04/Exercicio1_Secao04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Secao4_exercicios/Exercicio2_Secao04/Exercicio2_Secao04.iml" filepath="$PROJECT_DIR$/Secao4_exercicios/Exercicio2_Secao04/Exercicio2_Secao04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercícios_Seçoes.iml" filepath="$PROJECT_DIR$/Exercícios_Seçoes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Secao07_exercicio/Secao07_exercicio.iml" filepath="$PROJECT_DIR$/Secao07_exercicio/Secao07_exercicio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Secao5_Exercicios/Secao5_Exercicios.iml" filepath="$PROJECT_DIR$/Secao5_Exercicios/Secao5_Exercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Secao6_exercicios/Secao6_exercicios.iml" filepath="$PROJECT_DIR$/Secao6_exercicios/Secao6_exercicios.iml" />
+    </modules>
+  </component>
+</project>
