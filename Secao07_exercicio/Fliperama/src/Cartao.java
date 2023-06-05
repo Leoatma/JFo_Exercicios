@@ -1,12 +1,13 @@
 public class Cartao {
     private int saldoAtual;
     private int saldoTickets;
-    private int numCartao;
+    private final int numCartao;
     private static int contagemCartao;
 
     public Cartao() {
         contagemCartao++;
         this.numCartao = contagemCartao;
+        System.out.printf("Cartão nº%d criado com %d de saldo. \n", this.numCartao, this.saldoAtual);
     }
 
     public Cartao(int saldoAtual, int saldoTickets) {

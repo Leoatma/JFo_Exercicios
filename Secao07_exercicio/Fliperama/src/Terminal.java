@@ -13,7 +13,7 @@ public class Terminal {
         System.out.println("------ FIM DA OPERAÇÃO ---------\n");
     }
 
-    public static void transferirCreditos(int creditosATransferir, int ticketsATransf, Cartao cartaoTransf, Cartao cartaoReceber) {
+    public static void transferirCreditosETickets(int creditosATransferir, int ticketsATransf, Cartao cartaoTransf, Cartao cartaoReceber) {
         System.out.println(" ------ TRANSFERÊNCIA ------\n");
         if ((creditosATransferir <= cartaoTransf.getSaldoAtual()) && (ticketsATransf <= cartaoTransf.getSaldoTickets())) {
 
@@ -33,7 +33,7 @@ public class Terminal {
         System.out.println("---- FIM DA OPERAÇÂO ----- \n");
     }
 
-    public static void trocarTickets(Cartao cartao, Premio premio) {
+    public static void trocarTicketsPorPremio(Cartao cartao, Premio premio) {
         System.out.println("----- TROCA DE PRÊMIOS ------\n");
         if ((premio.getValorEmTickets() <= cartao.getSaldoTickets()) && (premio.getQtdeEstoque() > 0)) {
             cartao.setSaldoTickets(cartao.getSaldoTickets() - premio.getValorEmTickets());
