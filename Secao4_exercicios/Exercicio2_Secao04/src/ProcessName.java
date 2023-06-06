@@ -11,7 +11,7 @@ public class ProcessName {
         scan.close();
 
         String primeiroNome = nomeCompleto.substring(0, nomeCompleto.indexOf(" "));
-        String sobreNome = nomeCompleto.substring((nomeCompleto.indexOf(" ") + 1), nomeCompleto.length());
+        String sobreNome = nomeCompleto.substring((nomeCompleto.lastIndexOf(" ") + 1), nomeCompleto.length());
 
         System.out.printf("Seu nome é: %s, %s.%n", sobreNome, primeiroNome.toUpperCase().charAt(0));
 
