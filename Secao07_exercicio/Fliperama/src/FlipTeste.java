@@ -9,9 +9,9 @@ public class FlipTeste {
         Terminal.verificarSaldoCartao(cartao3);
         Terminal.verificarSaldoCartao(cartao2);
 
-        Terminal.transferirCreditos(3000, 100, cartao1, cartao2);
+        Terminal.transferirCreditosETickets(3000, 100, cartao1, cartao2);
         Terminal.comprarCreditosCartao(cartao3, 1100);
-        Terminal.transferirCreditos(4000, 400, cartao3, cartao2);
+        Terminal.transferirCreditosETickets(4000, 400, cartao3, cartao2);
 
         Jogo pinball = new Jogo(300);
         Jogo daytona = new Jogo(1500);
@@ -23,13 +23,13 @@ public class FlipTeste {
 
         daytona.jogar(cartao2);
         pinball.jogar(cartao2);
-        Terminal.trocarTickets(cartao2, bolaFutebol);
-        Terminal.trocarTickets(cartao2, ursinho);
+        Terminal.trocarTicketsPorPremio(cartao2, bolaFutebol);
+        Terminal.trocarTicketsPorPremio(cartao2, ursinho);
 
         dungeonsAndDragons.jogar(cartao1);
         dungeonsAndDragons.jogar(cartao1);
-        Terminal.trocarTickets(cartao1, bolaFutebol);
-        Terminal.trocarTickets(cartao1, boneca);
+        Terminal.trocarTicketsPorPremio(cartao1, bolaFutebol);
+        Terminal.trocarTicketsPorPremio(cartao1, boneca);
 
     }
 

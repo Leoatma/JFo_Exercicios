@@ -3,8 +3,8 @@ public class Premio {
     private int valorEmTickets;
     private int qtdeEstoque;
 
-    public Premio() {
-    }
+   public Premio() {
+   }
 
     public Premio(String nome, int valorEmTickets, int qtdeEstoque) {
         this.nome = nome;
