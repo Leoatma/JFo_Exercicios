@@ -15,38 +15,24 @@ public class Jogo {
     private final int jogoId;
     private static int contagemJogos = 0;
     private static int contadorSemanaJogosCancelados = 3;
-    private static int contadorTotalSemanasTemporada = 4;
+    private static int contadorTotalSemanasTemporada = 3;
 
     public Equipe getEquipe1() {
         return equipe1;
     }
 
-    public void setEquipe1(Equipe equipe1) {
-        this.equipe1 = equipe1;
-    }
 
     public Equipe getEquipe2() {
         return equipe2;
-    }
-
-    public void setEquipe2(Equipe equipe2) {
-        this.equipe2 = equipe2;
     }
 
     public int getPlacarEquipe1() {
         return placarEquipe1;
     }
 
-    public void setPlacarEquipe1(int placarEquipe1) {
-        this.placarEquipe1 = placarEquipe1;
-    }
 
     public int getPlacarEquipe2() {
         return placarEquipe2;
-    }
-
-    public void setPlacarEquipe2(int placarEquipe2) {
-        this.placarEquipe2 = placarEquipe2;
     }
 
     public double getTemperatura() {
@@ -67,7 +53,10 @@ public class Jogo {
 
         Random geradorAleatoriedade = new Random();
 
+
         int equipe1_Id = geradorAleatoriedade.nextInt(0, 3);
+
+        // Equipes selecionadas aleatoriamente para o jogo.
 
         switch (equipe1_Id) {
             case 0 -> this.equipe1 = Programador.getLigaEquipes(0);
@@ -88,6 +77,7 @@ public class Jogo {
             case 3 -> this.equipe2 = Programador.getLigaEquipes(3);
         }
 
+        // Se a temp for alta, o placar terá maior chance de mais gols, placar gerado aleatoriamente
         if (temperatura > 30) {
             this.placarEquipe1 = geradorAleatoriedade.nextInt(0, 9);
             this.placarEquipe2 = geradorAleatoriedade.nextInt(0, 9);
@@ -98,6 +88,7 @@ public class Jogo {
         }
 
 
+        // atualizando estatisticas de cada equipe do jogo
         if (this.placarEquipe1 > this.placarEquipe2) {
             this.equipe1.setVitorias(this.equipe1.getVitorias() + 1);
             this.equipe1.setGolsMarcados(this.equipe1.getGolsMarcados() + this.placarEquipe1);
@@ -130,11 +121,10 @@ public class Jogo {
 
     }
 
-
     public static void addJogo(Scanner scanner) {
 
         int contadorSemana = 1;
-        while (contadorSemanaJogosCancelados > 0 && contadorTotalSemanasTemporada > 0) {
+        while (contadorSemanaJogosCancelados > 0 && contadorTotalSemanasTemporada > 0) { // se 3 jogos forem cancelados, a liga encerra. / 4 times, total 3 semanas com 12 jogos.
             System.out.printf("\nQual a temperatura, em Celsius, durante a semana %d? \n", contadorSemana);
             double temperaturaSemana = scanner.nextDouble();
 
@@ -143,6 +133,7 @@ public class Jogo {
                 contadorSemanaJogosCancelados--;
                 System.out.printf("Jogos da semana %d Cancelados. \n", contadorSemana);
             } else {
+                // Cada semana são 2 jogos;
                 listaJogos.add(new Jogo(temperaturaSemana));
                 listaJogos.add(new Jogo(temperaturaSemana));
                 contadorTotalSemanasTemporada--;
